@@ -33,6 +33,11 @@
     text-align: center;
 }
 
+.main-right a{
+    text-decoration: none;
+    color: black;
+}
+
 .main-right img{
     float: left;
     width: 90%;
@@ -57,6 +62,7 @@
 .volunteer-div{
     float: left;
     width: 100%;
+    margin: 5% 0% 3% 0%;
 }
 
 .volunteer-left{
@@ -91,4 +97,80 @@
 
 #call{
     text-align: center;
+}
+
+.details{
+    float: left;
+    width: 100%;
+    background-color: rgba(41, 39, 39, 0.81);
+    padding: 3% 0% 3% 0%;
+}
+
+.sub-details{
+    float: left;
+    width: 20%;
+    border: 3px solid aliceblue;
+    color: aliceblue;
+    margin: 0% 0% 0% 10%;
+    height: 250px;
+    text-align: center;
+}
+
+.sub-details h1{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.sub-details p{
+    font-size: 20px;
+    text-align: start;
+    margin: 0% 0% 0% 10%;
+}
+
+.sub-details input, .sub-details select{
+    float: left;
+    width: 85%;
+    background-color: transparent;
+    border: 1px solid aliceblue;
+    font-size: 22px;
+    color: aliceblue;
+    margin: 5% 0% 0% 5%;
+}
+
+.sub-details option{
+    background-color: black;
+}
+
+.sub-details button{
+    float: left;
+    width: 50%;
+    font-size: 22px;
+    margin: 5% 0% 0% 5%;
+
+}
+
+.crud-div{
+    float: left;
+    width: 40%;
+    border: 4px solid black;
+    margin: 10% 0% 0% 30%;
+}
+
+.crud-div a{
+    float: left;
+    width: 40%;
+    border: 3px solid black;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    margin: 2% 0% 2% 6%;
+}
+
+.footer-div{
+    float: left;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
 }

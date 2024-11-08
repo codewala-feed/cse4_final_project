@@ -14,10 +14,10 @@
 
     <div class="main">
         <div class="main-left">
-            <img src="../static/images/admissions.jpg" alt="noImg">
+            <a href="/campus_tour"><img src="../static/images/admissions.jpg" alt="noImg"></a>
         </div>
         <div class="main-right">
-            <h1>Manage Admissions</h1>
+            <a href="/admissions"><h1>Manage Admissions</h1></a>
             <img src="../static/images/college.png" alt="noImg">
         </div>
     </div>
@@ -51,6 +51,41 @@
                 admissions@qis.com
             </p>
         </div>
+    </div>
+
+    <div class="details">
+        <div class="sub-details">
+            <h1>AddRess</h1>
+            <p>Vengamukkapalem, Ongole <br>
+                Prakasam District - 523272 <br>
+                Andhra Pradesh, India</p>
+        </div>
+        <div class="sub-details">
+            <form action="/callme" method="post">
+                <input type="text" placeholder="name" name="name" required>
+                <input type="email" placeholder="email" name="email" required>
+                <input type="number" placeholder="number" name="number" required>
+                <select name="course" required>
+                    <option value="" disabled selected>select course</option>
+                    <option value="computers">computers</option>
+                    <option value="robotics">robotics</option>
+                    <option value="electronics">electronics</option>
+                    <option value="mining">mining</option>
+                </select>
+                <button type="submit">CallMe</button>
+            </form>
+        </div>
+        <div class="sub-details">
+            <h1>ConTAct</h1>
+            <p>Phone: +91 92464 19542 <br>
+                Mobile: +91 92464 19542 <br>
+                Fax: +91 92464 19542 <br>
+                Email: principal@qiscet.edu.in</p>
+        </div>
+    </div>
+
+    <div class="footer-div">
+        <p>Copyright © 2024 || All Rights Reserved || Developed By NIKHIL-POKURI</p>
     </div>
 
 </body>
