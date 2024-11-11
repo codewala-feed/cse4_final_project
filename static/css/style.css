@@ -174,3 +174,36 @@
     text-align: center;
     color: aliceblue;
 }
+
+.register-div, .update-div, .delete-div{
+    float: left;
+    width: 40%;
+    margin: 3% 0% 0% 30%;
+}
+
+.register-div input, .register-div button, .update-div input, .update-div button, .update-div select, .delete-div input, .delete-div button{
+    float: left;
+    width: 90%;
+    font-size: 25px;
+    border: 2px solid black;
+    margin: 3% 0% 0% 5%;
+
+}
+
+.tour-div{
+    float: left;
+    width: 75%;
+    /* border: 4px solid black; */
+    height: 600px;
+    text-align: center;
+    font-size: 30px;
+    margin: 3% 0% 5% 13%;
+    box-shadow: 10px 10px 90px black;
+}
+
+.tour-div iframe{
+    float: left;
+    width: 98.5%;
+    height: 400px;
+    border: 8px solid black;
+}
