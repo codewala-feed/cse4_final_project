@@ -3,8 +3,16 @@ from pymongo import MongoClient
 
 
 app = Flask(__name__)
-my_connection = MongoClient("localhost", 27017)
-my_db = my_connection["cse4_final"]
+host = "ocdb.app"
+port = 5050
+database = "db_42xsdynmd"
+username = "user_42xsdynmd"
+password = "p42xsdynmd"
+
+connection_str = f"mongodb://{username}:{password}@{host}:{port}/{database}"
+
+my_connection = MongoClient(connection_str)
+my_db = my_connection[database]
 students = my_db["students"]
 callme = my_db["callme"]
 
@@ -41,13 +49,20 @@ def register():
         rank = request.form["rank"]
         course = request.form["course"]
         address = request.form["address"]
-        return "Registered Successfully"
+        students.insert_one({
+            "id": _id, "name": name, "email":email, 
+            "phone":phone, "percentage":percentage,
+            "rank":rank, "course":course, "address":address
+        })
+        return redirect("/register")
     else:
         return render_template("register.html")
 
 @app.route("/view", methods=["GET"])
 def view():
-    return render_template("view.html")
+    data = students.find()
+    # print(list(data))
+    return render_template("view.html", response=list(data))
 
 @app.route("/update", methods=["GET", "POST"])
 def update():
@@ -55,7 +70,10 @@ def update():
         _id = request.form["id"]
         new_field = request.form["new_field"]
         new_value = request.form["new_value"]
-        return "Updated Successfully"
+        students.update_one(
+            {"id":_id}, {"$set":{new_field:new_value}}
+        )
+        return redirect("/update")
     else:
         return render_template("update.html")
 
@@ -63,7 +81,10 @@ def update():
 def delete():
     if request.method == "POST":
         _id = request.form["id"]
-        return "Deleted Successfully"
+        students.delete_one({
+            "id":_id
+        })
+        return redirect("/delete")
     else:
         return render_template("delete.html")
 
